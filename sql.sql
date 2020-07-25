@@ -22,3 +22,8 @@ ORDER BY Name
 INSERT INTO seller
 (Name, Email, BirthDate, BaseSalary, DepartmentId)
 VALUES (?, ?, ?, ?, ?)
+
+--update
+UPDATE seller
+SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ?
+WHERE Id = ?
