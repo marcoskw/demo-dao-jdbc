@@ -27,3 +27,7 @@ VALUES (?, ?, ?, ?, ?)
 UPDATE seller
 SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ?
 WHERE Id = ?
+
+--delete
+DELETE FROM seller
+WHERE Id = ?
