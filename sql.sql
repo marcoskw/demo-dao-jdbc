@@ -1,4 +1,21 @@
 --	!!!! SQLs do programa !!!!
+
+--SELLER
+
+--insert
+INSERT INTO seller
+(Name, Email, BirthDate, BaseSalary, DepartmentId)
+VALUES (?, ?, ?, ?, ?)
+
+--update
+UPDATE seller
+SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ?
+WHERE Id = ?
+
+--delete
+DELETE FROM seller
+WHERE Id = ?
+
 --findById
 SELECT  seller.*, department.Name as DepName
 FROM seller INNER JOIN department
@@ -18,16 +35,7 @@ ON seller.DepartmentId = department.Id
 WHERE DepartmentId = ?
 ORDER BY Name
 
---insert
-INSERT INTO seller
-(Name, Email, BirthDate, BaseSalary, DepartmentId)
-VALUES (?, ?, ?, ?, ?)
-
---update
-UPDATE seller
-SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ?
-WHERE Id = ?
-
---delete
-DELETE FROM seller
-WHERE Id = ?
+--DEPARTMENT
+INSERT INTO department
+(Id, Name)
+VALUES (?, ?)
