@@ -1,5 +1,5 @@
 --	!!!! SQLs do programa !!!!
-
+--=================================================================
 --SELLER
 
 --insert
@@ -35,7 +35,25 @@ ON seller.DepartmentId = department.Id
 WHERE DepartmentId = ?
 ORDER BY Name
 
+--=================================================================
 --DEPARTMENT
+
+--insert
 INSERT INTO department
 (Id, Name)
 VALUES (?, ?)
+
+--update
+UPDATE department
+SET Id = ?, Name = ?
+WHERE Id = ?
+
+--findById
+SELECT  department.*
+FROM department
+WHERE department.Id = ?
+
+--findAll order by Name
+SELECT  department.*
+FROM department 
+ORDER BY Name
