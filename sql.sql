@@ -57,3 +57,8 @@ WHERE department.Id = ?
 SELECT  department.*
 FROM department 
 ORDER BY Name
+
+--update
+UPDATE department
+SET Name = ?
+WHERE Id = ?
