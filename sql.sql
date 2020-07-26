@@ -62,3 +62,8 @@ ORDER BY Name
 UPDATE department
 SET Name = ?
 WHERE Id = ?
+
+--delete
+DELETE 
+FROM department 
+WHERE Id = ?

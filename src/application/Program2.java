@@ -16,10 +16,10 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-	/*	System.out.println("\n=== TEST 1: department insert =======");
+		System.out.println("\n=== TEST 1: department insert =======");
 		Department newDepartment = new Department(null, "Music");
 		departmentDao.insert(newDepartment);
-		System.out.println("Inserted! New id: " + newDepartment.getId()); */
+		System.out.println("Inserted! New id: " + newDepartment.getId()); 
 		
 		System.out.println();
 		
@@ -37,13 +37,20 @@ public class Program2 {
 				
 		System.out.println();
 		
-		System.out.println("\n=== TEST 4: update =======");
+		System.out.println("\n=== TEST 4: department update =======");
 		Department department2 = departmentDao.findById(1);
 		department2.setName("Food");
 		departmentDao.update(department2);
 		System.out.println("Update completed");
 			
+		System.out.println();
 		
+		System.out.println("=== Test 5: department delete ===");
+		System.out.print("Enter id for delete test: ");
+		int deleteId = scanner.nextInt();
+		departmentDao.deleteById(deleteId);
+		System.out.println("Delete Completed!");
+				
 		scanner.close();
 	}
 
